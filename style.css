@@ -1,1 +1,7 @@
-/* Add styles here */
+#chat-window {
+    width: 100%;
+}
+
+.message {
+    max-width: fit-content;
+}

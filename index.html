@@ -11,21 +11,26 @@
   <!-- This is JS support for dynamic color switching
   <script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.2/dist/cdn/material-dynamic-colors.min.js"></script>-->
   <link href='/style.css' rel='stylesheet'>
+  <link href='/theme.css' rel='stylesheet'>
 </head>
 
 <body class="dark">
-  <nav class="bottom">
+  <nav class="top">
+Hi
+  </nav>
+
+  <main class="responsive">
+    <div id="chat-window" class="absolute left bottom">
+
+    </div>
+
+  </main>
+  <nav class="bottom transparent">
     <div class="field border round">
       <input type="text" placeholder="Send a message...">
     </div>
     <button class="circle"><i class="fill">send</i></button>
   </nav>
-  <main class="responsive">
-    <div id="chat-window" class="padding absolute left bottom">
-
-    </div>
-
-  </main>
   <script src="main.js"></script>
 </body>
 
