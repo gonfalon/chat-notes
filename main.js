@@ -1,16 +1,18 @@
 var messages = localStorage.getItem('messages') ? JSON.parse(localStorage.getItem('messages')) : [];
 
+const getChatElement = (message) => `
+    <div class="message primary padding margin right-round top-round">
+        ${message}
+    </div>
+`;
+
 function updateMessages() {
     const main = document.querySelector('#chat-window');
     main.innerHTML = '';
  
-    for (let i = 0; i < messages.length; i++) {
-        const message = messages[i];
-        const messageElement = document.createElement('div');
-        messageElement.classList = 'message primary padding margin right-round top-round'
-        messageElement.textContent = message;
-        main.appendChild(messageElement);
-    }
+    messages.forEach((message) => {
+        main.innerHTML += getChatElement(message);
+    });
 }
 
 function sendMessage() {
